@@ -188,4 +188,24 @@ body {
     margin-left: 10vmax;
     position: relative;
   }
+  .user-name_interlocutor {
+    background-color: white;
+    position: absolute;
+    left: 0;
+    top: 0;
+    margin: 0.5vmax;
+  }
+  .user-name_user {
+    background-color: white;
+    position: absolute;
+    right: 0;
+    top: 0;
+    margin: 0.5vmax;
+  }
+  .user-message {
+    font-size: 2vmax;
+    padding: 0 2vw;
+    color: white;
+    word-break: break-all;
+  }
 }
