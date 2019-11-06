@@ -180,12 +180,12 @@ body {
     display: flex;
     justify-content: flex-end;
     background-color: rgb(255, 101, 41);
-    margin-right: 10vmax;
+    margin-right: 32vw;
     position: relative;
   }
   .message-container_user {
     background-color: rgb(114, 114, 114);
-    margin-left: 10vmax;
+    margin-left: 32vw;
     position: relative;
   }
   .user-name_interlocutor {
