@@ -54,6 +54,15 @@ body {
   overflow-y: auto;
 }
 
+.message-box::-webkit-scrollbar {
+  width: 0.5vmax;
+}
+
+.message-box::-webkit-scrollbar-thumb {
+  border-radius: 1vmax;
+  background-color: black;
+}
+
 .message-container {
   width: 50%;
   margin: 2vmax;
@@ -81,6 +90,7 @@ body {
   border: 0.1vmax solid black;
   border-radius: 20vmax;
   padding: 0.5vmax;
+  border-color: rgba(0, 0, 0, 0.315);
 }
 
 .user-name_interlocutor {
@@ -106,7 +116,7 @@ body {
 }
 
 .input-box {
-  height: 2vmax;
+  height: 2.5vmax;
   display: flex;
   justify-content: center;
   background-color: rgb(114, 114, 114);
@@ -124,8 +134,15 @@ body {
 
 .input-box__button {
   cursor: pointer;
-  height: 2vmax;
+  height: 2.5vmax;
   border-radius: 1.5vmax;
+}
+
+.input-box__button_switch {
+  margin-left: 1vmax;
+  width: 2vmax;
+  outline: none;
+  border: none;
 }
 
 .input-box__button_none {
@@ -136,4 +153,38 @@ body {
   width: 100%;
   height: 5vmax;
   background-color: black;
+}
+
+
+/*media styles*/
+
+@media (min-width: 300px) and (max-width: 800px) {
+  .message-box {
+    background-color: white;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 37.5vmax;
+    flex-direction: column;
+    overflow-x: hidden;
+    overflow-y: auto;
+  }
+  .message-container {
+    width: 20%;
+    margin: 2vmax;
+    padding: 2.3vmax;
+    border-radius: 1.5vmax;
+  }
+  .message-container_interlocutor {
+    display: flex;
+    justify-content: flex-end;
+    background-color: rgb(255, 101, 41);
+    margin-right: 10vmax;
+    position: relative;
+  }
+  .message-container_user {
+    background-color: rgb(114, 114, 114);
+    margin-left: 10vmax;
+    position: relative;
+  }
 }
