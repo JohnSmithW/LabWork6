@@ -66,7 +66,7 @@ body {
 .message-container {
   width: 50%;
   margin: 2vmax;
-  padding: 2.3vmax;
+  padding: 0.3vmax;
   border-radius: 1.5vmax;
 }
 
@@ -111,6 +111,7 @@ body {
 
 .user-message {
   font-size: 1.1vmax;
+  padding: 0 5vw;
   color: white;
   word-break: break-all;
 }
