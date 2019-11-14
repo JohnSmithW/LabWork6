@@ -1,0 +1,58 @@
+body {
+  font-family: 'M PLUS 1p', sans-serif;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+}
+
+.main {
+  margin-top: 5vmax;
+  width: 20%;
+  box-shadow: 0.1vmax 0.2vmax 0.4vmax grey;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 7%;
+}
+
+.form__field {
+  margin: 0.5%;
+  font-size: 1.1vmax;
+}
+
+.form__field_validation {
+  box-shadow: 0 0 0.5vmax 0.1vmax red;
+  color: rgb(255, 100, 100);
+}
+
+.form__input {
+  border: 0.1vmax solid rgba(0, 0, 0, 0.116);
+  border-radius: 0.2vmax;
+  outline: none;
+  padding: 0.2vmax;
+  font-size: 0.9vmax;
+}
+
+.form__input_validation {
+  border-color: rgb(255, 100, 100);
+}
+
+.form__input_list-box {
+  display: inline;
+}
+
+.form__button {
+  font-size: 1vmax;
+  margin-top: 10%;
+  border-radius: 0.2vmax;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+.form__button:hover {
+  background-color: rgb(145, 241, 241);
+}

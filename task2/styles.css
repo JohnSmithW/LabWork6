@@ -12,7 +12,7 @@ body {
   background-color: black;
 }
 
-.header__img-box {
+.img-box {
   margin: 1vmax;
   display: flex;
   justify-content: center;
@@ -20,13 +20,13 @@ body {
   width: 20%;
 }
 
-.header__img-box__img {
+.img-box__img {
   margin: 1vmax;
   width: 4vmax;
   border-radius: 20vmax;
 }
 
-.header__img-box__text {
+.img-box__text {
   color: white;
   font-size: 2vmax;
 }
@@ -137,13 +137,6 @@ body {
   cursor: pointer;
   height: 2.5vmax;
   border-radius: 1.5vmax;
-}
-
-.input-box__button_switch {
-  margin-left: 1vmax;
-  width: 2vmax;
-  outline: none;
-  border: none;
 }
 
 .input-box__button_none {
