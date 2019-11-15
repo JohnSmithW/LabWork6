@@ -18,14 +18,22 @@ body {
   margin: 7%;
 }
 
+.form-list {
+  border: 0.1vmax solid rgba(0, 0, 0, 0.116);
+  border-radius: 0.2vmax;
+  outline: none;
+  padding: 0.2vmax;
+  font-size: 0.9vmax;
+}
+
 .form__field {
   margin: 0.5%;
   font-size: 1.1vmax;
 }
 
 .form__field_validation {
-  box-shadow: 0 0 0.5vmax 0.1vmax red;
   color: rgb(255, 100, 100);
+  margin-bottom: 0.5vmax;
 }
 
 .form__input {
@@ -36,8 +44,17 @@ body {
   font-size: 0.9vmax;
 }
 
+.form__error {
+  color: rgb(255, 100, 100);
+}
+
+.form__error_none {
+  display: none;
+}
+
 .form__input_validation {
-  border-color: rgb(255, 100, 100);
+  box-shadow: 0 0 0.5vmax 0.1vmax red;
+  margin-bottom: 0.5vmax;
 }
 
 .form__input_list-box {

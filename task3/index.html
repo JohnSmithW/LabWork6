@@ -11,15 +11,23 @@
 
 <body>
   <div class="main">
-    <form class="form">
+    <form onsubmit="return false" class="form">
       <label class="form__field" for="name">Full name</label>
       <input class="form__input" type="text" id="name" placeholder="First and Last name">
+      <span class="form__error form__error_none">fill your full name !</span>
       <label class="form__field" for="email">Email</label>
       <input class="form__input" type="email" id="email" placeholder="@">
+      <span class="form__error form__error_none">fill the required format email !</span>
       <label class="form__field" for="city">City</label>
-      <input class="form__input form__input_list-box" type="text" id="city" placeholder="City">
+      <select class="form-list" id="city">
+       <option class="form-list__item">Los Angeles</option>
+       <option class="form-list__item">Washington</option>
+       <option class="form-list__item">New York city</option>
+       <option class="form-list__item">San-Francisco</option>
+      </select>
       <label class="form__field" for="password">Password</label>
       <input class="form__input" type="password" id="password" placeholder="Password">
+      <span class="form__error form__error_none">password must be at least 6 characters which contain numeric digit and upper case  !</span>
       <button class="form__button" type="submit">Submit</button>
     </form>
   </div>
