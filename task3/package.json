@@ -6,20 +6,20 @@
   "watch": {
     "validate-html": {
       "patterns": [
-        "task2"
+        "src"
       ],
       "extensions": "html",
       "quiet": true,
       "legacyWatch": true
     },
-    "validate-css": "task2/css/styles.css",
-    "jshint": "script.js/"
+    "validate-css": "src/css/styles.css",
+    "jshint": "src/"
   },
   "scripts": {
-    "server": "live-server task2",
-    "validate-html": "html-validate index.html",
-    "validate-css": "css-validator styles.css",
-    "jshint": "jshint script.js/",
+    "server": "live-server src",
+    "validate-html": "html-validate src",
+    "validate-css": "css-validator src/css/styles.css",
+    "jshint": "jshint src/",
     "watch": "npm-watch",
     "dev-mode": "npm-run-all --parallel server watch",
     "postinstall": "npm i -g live-server css-validator html-validate jshint"
