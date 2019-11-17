@@ -12,24 +12,6 @@ function userSwitch() {
   var button = document.querySelector('.input-box__button');
   var comment = document.querySelector('.input-box__text');
 
-  function commentBot() {
-    if (comment.value !== '' && !(/^\s+$/.test(comment.value))) {
-      var newComment = document.createElement('div');
-      newComment.className = 'message-container message-container_interlocutor';
-      var interlocutorName = document.createElement('span');
-      interlocutorName.className = 'user-name user-name_interlocutor';
-      var interlocutorComment = document.createElement('p');
-      interlocutorComment.className = 'user-message';
-      interlocutorName.innerHTML = 'Interlocutor';
-      interlocutorComment.innerHTML = comment.value;
-      document.querySelector('.message-box').appendChild(newComment);
-      newComment.appendChild(interlocutorName);
-      newComment.appendChild(interlocutorComment);
-      comment.value = '';
-    }
-  }
-
-
   button.addEventListener('click', function userCommentAppend() {
     if (comment.value !== '' && !(/^\s+$/.test(comment.value)) && !isUser) {
       var newComment = document.createElement('div');
@@ -45,8 +27,19 @@ function userSwitch() {
       newComment.appendChild(userComment);
       comment.value = '';
     }
-    if (comment.value !== '' && isUser === true) {
-      commentBot();
+    if (comment.value !== '' && !(/^\s+$/.test(comment.value)) && isUser === true) {
+      var newComment = document.createElement('div');
+      newComment.className = 'message-container message-container_interlocutor';
+      var interlocutorName = document.createElement('span');
+      interlocutorName.className = 'user-name user-name_interlocutor';
+      var interlocutorComment = document.createElement('p');
+      interlocutorComment.className = 'user-message';
+      interlocutorName.innerHTML = 'Interlocutor';
+      interlocutorComment.innerHTML = comment.value;
+      document.querySelector('.message-box').appendChild(newComment);
+      newComment.appendChild(interlocutorName);
+      newComment.appendChild(interlocutorComment);
+      comment.value = '';
     }
   });
 })();
