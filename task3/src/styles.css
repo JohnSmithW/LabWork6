@@ -49,7 +49,7 @@ body {
   font-size: 0.9vmax;
 }
 
-.form__error {
+.form-field__error {
   color: rgb(255, 100, 100);
 }
 

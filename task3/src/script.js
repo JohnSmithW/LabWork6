@@ -4,7 +4,7 @@
   var email = document.getElementById('email');
   var password = document.getElementById('password');
   var button = document.querySelector('.form__button');
-  var formError = document.querySelectorAll('.form__error');
+  var formError = document.querySelectorAll('.form-field__error');
   var formField = document.querySelectorAll('.form-field__label');
 
   button.addEventListener('click', function() {
