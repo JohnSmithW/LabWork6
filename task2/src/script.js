@@ -1,18 +1,11 @@
 'use strict';
 
-var isUser = false;
-
-function userSwitch() {
-  if (!isUser) {
-    isUser = true;
-  } else { isUser = false; }
-}
-
 (function messageCreator() {
   var button = document.querySelector('.input-box__button');
   var comment = document.querySelector('.input-box__text');
 
-  button.addEventListener('click', function userCommentAppend() {
+  function userCommentAppend(isUser) {
+
     if (comment.value !== '' && !(/^\s+$/.test(comment.value)) && !isUser) {
       var newComment = document.createElement('div');
       newComment.className = 'message-container message-container_user';
@@ -27,19 +20,24 @@ function userSwitch() {
       newComment.appendChild(userComment);
       comment.value = '';
     }
-    if (comment.value !== '' && !(/^\s+$/.test(comment.value)) && isUser === true) {
-      var newComment = document.createElement('div');
-      newComment.className = 'message-container message-container_interlocutor';
+    if (comment.value !== '' && !(/^\s+$/.test(comment.value)) && isUser) {
+      var newCommentInterlocutor = document.createElement('div');
+      newCommentInterlocutor.className = 'message-container message-container_interlocutor';
       var interlocutorName = document.createElement('span');
       interlocutorName.className = 'user-name user-name_interlocutor';
       var interlocutorComment = document.createElement('p');
       interlocutorComment.className = 'user-message';
       interlocutorName.innerHTML = 'Interlocutor';
       interlocutorComment.innerHTML = comment.value;
-      document.querySelector('.message-box').appendChild(newComment);
-      newComment.appendChild(interlocutorName);
-      newComment.appendChild(interlocutorComment);
+      document.querySelector('.message-box').appendChild(newCommentInterlocutor);
+      newCommentInterlocutor.appendChild(interlocutorName);
+      newCommentInterlocutor.appendChild(interlocutorComment);
       comment.value = '';
     }
-  });
+  }
+
+
+  button.onclick = function() {
+    userCommentAppend(false);
+  };
 })();

@@ -52,6 +52,7 @@ body {
 
 .img-box__img {
   width: 150px;
+  vertical-align: middle;
 }
 
 .social-box__link {
