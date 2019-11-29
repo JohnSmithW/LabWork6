@@ -1,8 +1,13 @@
 'use strict';
 
 
+window.onsubmit = function() {
+  return false;
+};
+
 var button = document.querySelector('.input-box__button');
 var comment = document.querySelector('.input-box__text');
+
 
 
 function userMessage(text) {
@@ -18,7 +23,7 @@ function userMessage(text) {
   newComment.appendChild(userName);
   newComment.appendChild(userComment);
   comment.value = '';
-};
+}
 
 
 function interlocutorMessage(text) {
@@ -42,10 +47,10 @@ function userCommentAppend(role, text) {
 
 
   if (text !== '' && !(/^\s+$/.test(text)) && role === 'user') {
-    userMessage(text)
+    userMessage(text);
   }
   if (text !== '' && !(/^\s+$/.test(text)) && role === 'interlocutor') {
-    interlocutorMessage(text)
+    interlocutorMessage(text);
   }
 }
 
