@@ -37,7 +37,7 @@ body {
   padding: 10px 15px;
 }
 
-.container-menu__item.active {
+.container-menu__item_active {
   color: black;
 }
 
